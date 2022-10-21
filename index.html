@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card shadow">
+        <div class="card-header">
+          Bookshelf Apps
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-50">
+              <h3 class="column-title"><i class="fa fa-plus-circle"></i> Tambah Buku Baru</h3>
+              <form id="inputBook">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  Judul
+                </span>
+                <input type="text" id="inputBookTitle" placeholder="Masukkan judul buku..." required>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  Penulis
+                </span>
+                <input type="text" id="inputBookAuthor" placeholder="Masukkan penulis buku..." required>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  Tahun
+                </span>
+                <input type="number" id="inputBookYear" placeholder="Masukkan tahun buku..." min="1000" max="9999" required>
+              </div>
+              <label class="container-checkbox">Buku Selesai Dibaca
+                <input type="checkbox" id="inputBookIsComplete" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+              <button type="submit" class="btn-submit shadow">Masukkan buku ke rak <i class="fa fa-chevron-right"></i></button>
+              </form>
+            </div>
+            <div class="col-50">
+              <h3 class="column-title"><i class="fa fa-book"></i> Pencarian Buku</h3>
+
+              <form id="searchBook">
+                <input type="text" id="searchBookTitle" class="textbox" placeholder="Tuliskan judul buku...">
+                <input title="Search" value="" type="submit" class="button">
+              </form><br><br>
+
+              <div class="alert-belum-dibaca">
+                <i class="fa fa-book"></i> Belum Selesai Dibaca
+              </div>
+              <div id="incompleteBookshelfList">
+              </div>
+
+              <div class="alert-sudah-dibaca">
+                <i class="fa fa-book"></i> Selesai Dibaca
+              </div>
+              <div id="completeBookshelfList">
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            - Developed By Krishna Hendra Wijaya &copy; 2021 -
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/c3a6dded80.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+    <script src="js/storage.js" charset="utf-8"></script>
+    <script src="js/dom.js" charset="utf-8"></script>
+  </body>
+</html>
